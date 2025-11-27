@@ -20,6 +20,22 @@ body {
   height: 70px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.35rem;
+  color: #5c4b43;
+  font-weight: 700;
+}
+
+.logo-icon img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
 .hero-content h1 {
   font-family: "Eagle Lake", "Times New Roman", serif;
   font-size: 2.5rem;
@@ -70,4 +86,64 @@ body {
   background: linear-gradient(135deg, #cea375, #8b4343);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.welcome {
+  padding: 3rem 0;
+  background-color: #f5f1e8;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.welcome-text h2 {
+  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-size: 1.8rem;
+  color: #5c4b43;
+  margin-bottom: 1rem;
+}
+
+.welcome-text p {
+  color: #8a7a70;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #5c4b43;
+  border: 1px solid#5c4b434d;
+}
+
+/* welcome image placeholder */
+.welcome-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  background: linear-gradient(135deg, #8b4343 0%, #d4a574 100%);
+  border-radius: 12px;
+  height: 300px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f1e8;
+  font-size: 14px;
+  text-align: center;
+}
+
+.welcome-image img {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
