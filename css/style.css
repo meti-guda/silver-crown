@@ -1,19 +1,73 @@
 body {
-  color: #2e2420;
+  color: #572e19;
   background-color: #f5f1e8;
   line-height: 1.6;
 }
+
 .navbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: rgba(245, 241, 232, 0.98);
+  background-color: #f5f1e8;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(224, 213, 200, 0.7);
+  border-bottom: 1px solid#E0D5C8;
 }
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.hero-content h1 {
+  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-size: 2.5rem;
+  color: #5c4b43;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  color: #8a7a70;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .container {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  background-color: #f5f1e8;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #cea375, #8b4343);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
