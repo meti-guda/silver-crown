@@ -302,3 +302,101 @@ body {
   color: #5c4b43;
   font-size: 0.9rem;
 }
+
+/* menu page */
+
+.menu-header {
+  padding: 3rem 0 2rem;
+  background-color: #f5f1e8;
+  text-align: center;
+}
+
+.menu-header h1 {
+  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-size: 2.2rem;
+  color: #5c4b43;
+  margin-bottom: 0.5rem;
+}
+
+.menu-header p {
+  font-size: 0.95rem;
+  color: #8a7a70;
+}
+
+.coffee-menu,
+.cold-menu,
+.pastries-menu,
+.breakfast-menu {
+  padding: 2rem 0;
+  background-color: #f5f1e8;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem 2.5rem;
+}
+
+.menu-item {
+  padding: 0.8rem 0.2rem;
+  border-bottom: 1px dashed #e0d5c8;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.item-header h3 {
+  font-size: 1rem;
+  color: #5c4b43;
+}
+
+.price {
+  font-weight: 600;
+  color: #8b4343;
+  font-size: 0.95rem;
+}
+
+.menu-item p {
+  font-size: 0.9rem;
+  color: #8a7a70;
+}
+
+.item-amharic {
+  font-size: 0.8rem;
+  color: #8b4343;
+  margin-left: 0.25rem;
+}
+
+.quality-info {
+  padding: 2.5rem 0 3rem;
+  background-color: #f5f1e8;
+  text-align: center;
+}
+
+.quality-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quality-badge {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background-color: #f5e5cf;
+  color: #5c4b43;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.quality-note {
+  font-size: 0.9rem;
+  color: #8a7a70;
+  max-width: 550px;
+  margin: 0 auto;
+}
