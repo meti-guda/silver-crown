@@ -4,13 +4,20 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 .navbar {
   position: sticky;
   top: 0;
   z-index: 999;
   background-color: #f5f1e8;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid#E0D5C8;
+  border-bottom: 1px solid #e0d5c8;
 }
 
 .navbar-content {
@@ -37,6 +44,12 @@ body {
   height: 80px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
 .hero {
   padding: 4.5rem 0 3.5rem;
   background-color: #f5f1e8;
@@ -46,6 +59,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  text-align: left;
 }
 
 .hero-content h1 {
@@ -59,13 +73,6 @@ body {
   color: #8a7a70;
   font-size: 1rem;
   margin-bottom: 1.5rem;
-}
-
-.container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 .btn {
@@ -87,6 +94,12 @@ body {
   background: linear-gradient(135deg, #cea375, #8b4343);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #5c4b43;
+  border: 1px solid #5c4b434d;
 }
 
 .welcome {
@@ -114,30 +127,10 @@ body {
   font-size: 0.95rem;
 }
 
-.secondary-btn {
-  background-color: transparent;
-  color: #5c4b43;
-  border: 1px solid#5c4b434d;
-}
-
 .welcome-image {
   display: flex;
   justify-content: center;
 }
-
-/* .image-placeholder {
-  background: linear-gradient(135deg, #8b4343 0%, #d4a574 100%);
-  border-radius: 12px;
-  height: 300px;
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f5f1e8;
-  font-size: 14px;
-  text-align: center;
-} */
 
 .welcome-image img {
   border-radius: 12px;
@@ -189,6 +182,47 @@ body {
 .offering-card p {
   font-size: 0.9rem;
   color: #8a7a70;
+}
+
+.testimonials {
+  padding: 3rem 0;
+  background-color: #f5f1e8;
+}
+
+.testimonials .section-title {
+  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-size: 2rem;
+  color: #5c4b43;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem 1.1rem;
+  border: 1px solid #e0d5c8;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  font-size: 0.9rem;
+  color: #8a7a70;
+}
+
+.stars {
+  color: #f3c443;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-name {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #5c4b43;
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -262,117 +296,76 @@ body {
   color: #f5f1e8;
 }
 
-.testimonials {
-  padding: 3rem 0;
-  background-color: #f5f1e8;
-}
-
-.testimonials .section-title {
-  font-family: "Eagle Lake", "Times New Roman", serif;
-  font-size: 2rem;
-  color: #5c4b43;
-  margin-bottom: 1.5rem;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.testimonial-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.2rem 1.1rem;
-  border: 1px solid #e0d5c8;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
-  font-size: 0.9rem;
-  color: #8a7a70;
-}
-
-.stars {
-  color: #f3c443;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-.customer-name {
-  margin-top: 0.6rem;
-  font-weight: 600;
-  color: #5c4b43;
-  font-size: 0.9rem;
-}
-
-/* menu page */
-
 .special-menu {
   padding: 3rem 0;
   background-color: #f5f1e8;
-  text-align: center;
 }
 
 .special-title {
   font-family: "Eagle Lake", "Times New Roman", serif;
   font-size: 2rem;
   color: #5c4b43;
+  text-align: center;
   margin-bottom: 2.5rem;
 }
 
-.special-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  align-items: start;
+.special-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .special-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
   align-items: center;
+  gap: 2rem;
 }
 
 .special-image {
-  width: 150px;
-  height: 130px;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
   object-fit: contain;
   display: block;
-  margin-bottom: 0.75rem;
+  margin: 0 auto;
+}
+
+.special-text {
+  text-align: left;
 }
 
 .special-price {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #8b4343;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .special-name {
   font-family: "Eagle Lake", "Times New Roman", serif;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #5c4b43;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .special-desc {
   font-size: 0.9rem;
   color: #8a7a70;
-  max-width: 240px;
+  max-width: 260px;
 }
 
-@media (max-width: 900px) {
-  .special-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.special-item:nth-child(even) {
+  grid-template-columns: 1fr 1.2fr;
 }
 
-@media (max-width: 600px) {
-  .special-grid {
-    grid-template-columns: 1fr;
-  }
+.special-item:nth-child(even) .special-image {
+  order: 2;
+}
 
-  .special-image {
-    width: 180px;
-    height: 150px;
-  }
+.special-item:nth-child(even) .special-text {
+  order: 1;
+  text-align: right;
+  margin-left: auto;
 }
 
 .menu-header {
@@ -395,8 +388,7 @@ body {
 
 .coffee-menu,
 .cold-menu,
-.pastries-menu,
-.breakfast-menu {
+.pastries-menu {
   padding: 2rem 0;
   background-color: #f5f1e8;
 }
@@ -421,40 +413,42 @@ body {
   display: block;
 }
 
-.menu-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.4rem 2.5rem;
-}
-
-.menu-item {
-  padding: 0.8rem 0.2rem;
-  border-bottom: 1px dashed #e0d5c8;
-}
-
-.item-header {
+.menu-table {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.25rem;
+  flex-direction: column;
+  border-top: 1px solid #e0d5c8;
 }
 
-.item-header h3 {
+.menu-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0d5c8;
+}
+
+.menu-text h3 {
   font-size: 1rem;
   color: #5c4b43;
+  margin-bottom: 0.3rem;
 }
 
-.price {
-  font-weight: 600;
-  color: #8b4343;
-  font-size: 0.95rem;
-}
-
-.menu-item p {
+.menu-text p {
   font-size: 0.9rem;
   color: #8a7a70;
+  max-width: 480px;
 }
 
+.menu-price {
+  font-size: 0.95rem;
+  color: #8b4343;
+  font-weight: 600;
+  text-align: right;
+  padding-left: 2rem;
+  white-space: nowrap;
+}
+
+/* Amharic */
 .item-amharic {
   font-size: 0.8rem;
   color: #8b4343;
@@ -489,4 +483,69 @@ body {
   color: #8a7a70;
   max-width: 550px;
   margin: 0 auto;
+}
+
+/*  Responsiveness  */
+
+@media (max-width: 900px) {
+  .offerings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .special-item:nth-child(even) .special-text {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .special-text {
+    text-align: center;
+  }
+
+  .special-desc {
+    margin: 0 auto;
+  }
+
+  .menu-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.3rem;
+  }
+
+  .menu-price {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .special-image {
+    width: 180px;
+    height: 150px;
+  }
+
+  .offerings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
