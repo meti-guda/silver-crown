@@ -1,3 +1,3 @@
 {
-  "conventionalCommits.scopes": ["home", "layout", "menu"]
+  "conventionalCommits.scopes": ["home", "layout", "menu", "styles"]
 }
