@@ -35,6 +35,7 @@ img {
   border-bottom: 1px solid #e0d5c8;
 }
 
+/* keep layout same for navbar content on all sizes */
 .navbar-content {
   display: flex;
   align-items: center;
@@ -65,16 +66,24 @@ img {
   list-style: none;
 }
 
-/* hide checkbox */
+/* hide checkbox visually but keep in DOM */
 .nav-toggle {
-  display: none;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* hamburger icon */
+/* hamburger icon (kept hidden by default, shown in mobile media query) */
 .nav-toggle-label {
-  display: none; /* shown only on mobile via media query */
+  display: none;
   cursor: pointer;
   padding: 0.25rem;
+  z-index: 1002; /* above overlay + drawer when needed */
 }
 
 .nav-toggle-label span,
@@ -104,20 +113,12 @@ img {
   top: 6px;
 }
 
-/* drawer: hidden by default */
+/* Default: hide the drawer completely for non-mobile (desktop) */
 .nav-drawer {
-  display: none;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 0.75rem 0 0.5rem;
+  display: none; /* important: not present on desktop at all */
 }
 
-.nav-drawer a {
-  color: #5c4b43;
-  font-size: 0.95rem;
-}
-
-/* when checked, animate icon */
+/* when checked, animate icon (these will be active only inside mobile media query below) */
 .nav-toggle:checked + .nav-toggle-label span {
   transform: rotate(45deg);
 }
@@ -129,12 +130,6 @@ img {
 
 .nav-toggle:checked + .nav-toggle-label span::after {
   opacity: 0;
-}
-
-/* IMPORTANT: checkbox and drawer are siblings inside navbar-content */
-.nav-toggle:checked ~ .nav-drawer {
-  display: flex;
-  border-top: 1px solid #e0d5c8;
 }
 
 /* ===== HERO (HOME) ===== */
@@ -651,7 +646,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  /* mobile navbar: hide links, show burger */
+  /* mobile navbar: hide inline links, show burger */
   .nav-links {
     display: none;
   }
@@ -664,6 +659,59 @@ img {
   .navbar-content {
     height: 60px;
   }
+
+  /* show drawer for mobile and keep it off-canvas until toggled */
+  .nav-drawer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -260px; /* hidden to the right */
+    width: 260px;
+    height: 100vh;
+    background-color: #1e1713;
+    color: #f5f1e8;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 1.5rem 1.5rem;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.3);
+    transition: right 0.25s ease;
+    z-index: 1001; /* above overlay */
+    /* keep the panel out of keyboard order until checked (optional) */
+  }
+
+  .nav-drawer a {
+    color: #f5f1e8;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  /* add a full-screen dim overlay (via pseudo-element) */
+  .nav-drawer::before {
+    content: "";
+    position: fixed;
+    inset: 0 260px 0 0; /* cover viewport except the area where drawer sits (so overlay ends at drawer left edge) */
+    /* explanation: this keeps the overlay clickable and ensures the drawer slides above it.
+       using inset values ensures the overlay width is full viewport minus drawer width */
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 1000; /* under the drawer (1001) but above page content (999) */
+    pointer-events: none;
+  }
+
+  /* when checked, slide drawer into view and show overlay */
+  .nav-toggle:checked ~ .nav-drawer {
+    right: 0; /* slide drawer into view from right */
+  }
+
+  .nav-toggle:checked ~ .nav-drawer::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* clicking overlay to close isn't possible without JS; to provide keyboard/mouse escape:
+     the overlay is not a real interactive element in pure CSS, but the user can toggle the checkbox again
+     by clicking the hamburger (label). That satisfies the no-JS requirement. */
 }
 
 /* phones 0–480px */
