@@ -22,8 +22,6 @@ img {
   padding: 0 1.5rem;
 }
 
-/* NAVBAR */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -37,7 +35,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px; /* unified base height */
+  height: 60px;
 }
 
 .logo {
@@ -46,7 +44,9 @@ img {
   gap: 1rem;
   font-size: 1.1rem;
   color: #5c4b43;
-  font-weight: 700;
+  font-family: "Chokokutai", system-ui;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .logo-icon img {
@@ -74,14 +74,10 @@ img {
   color: #8b4343;
 }
 
-/* hamburger toggle (hidden checkbox) */
-
 .nav-toggle {
   position: absolute;
   left: -9999px;
 }
-
-/* hamburger / X label */
 
 .nav-toggle-label {
   display: block;
@@ -90,7 +86,7 @@ img {
   top: 50%;
   right: 0.75rem;
   transform: translateY(-50%);
-  padding: 0.6rem; /* larger touch target */
+  padding: 0.6rem;
   background-color: rgba(245, 241, 232, 0.95);
   border-radius: 999px;
   z-index: 1002;
@@ -123,8 +119,6 @@ img {
   top: 6px;
 }
 
-/* turn into X when checked */
-
 .nav-toggle:checked + .nav-toggle-label span {
   transform: rotate(45deg);
 }
@@ -137,8 +131,6 @@ img {
 .nav-toggle:checked + .nav-toggle-label span::after {
   opacity: 0;
 }
-
-/* drawer base */
 
 .nav-drawer {
   display: flex;
@@ -170,13 +162,9 @@ img {
   color: #d4a574;
 }
 
-/* open state tied to structure, but transform-based */
-
 .nav-toggle:checked ~ .nav-drawer {
   transform: translateX(0);
 }
-
-/* DESKTOP NAV */
 
 @media (min-width: 768px) {
   .navbar-content {
@@ -209,8 +197,6 @@ img {
     right: 0;
   }
 }
-
-/* HERO */
 
 .hero {
   padding: 4.5rem 0 3.5rem;
@@ -264,8 +250,6 @@ img {
   border: 1px solid #5c4b434d;
 }
 
-/* WELCOME */
-
 .welcome {
   padding: 3rem 0;
   background-color: #f5f1e8;
@@ -304,8 +288,6 @@ img {
   display: block;
   object-fit: cover;
 }
-
-/* OFFERINGS */
 
 .offerings {
   padding: 3rem 0;
@@ -352,8 +334,6 @@ img {
   color: #8a7a70;
 }
 
-/* TESTIMONIALS */
-
 .testimonials {
   padding: 3rem 0;
   background-color: #f5f1e8;
@@ -394,8 +374,6 @@ img {
   color: #5c4b43;
   font-size: 0.9rem;
 }
-
-/* FOOTER */
 
 .footer {
   background-color: #1e1713;
@@ -469,8 +447,6 @@ img {
   font-size: 0.8rem;
   color: #f5f1e8;
 }
-
-/* SPECIAL MENU */
 
 .special-menu {
   padding: 3rem 0;
@@ -558,8 +534,6 @@ img {
   line-height: 1.5;
   margin-top: 0.5rem;
 }
-
-/* MENU SECTIONS */
 
 .menu-header {
   padding: 3rem 0 2rem;
@@ -660,8 +634,6 @@ img {
   margin-left: 0.25rem;
 }
 
-/* QUALITY INFO */
-
 .quality-info {
   padding: 2.5rem 0 3rem;
   background-color: #f5f1e8;
@@ -692,10 +664,6 @@ img {
   margin: 0 auto;
 }
 
-/* MAIN BREAKPOINTS */
-
-/* ≥480px: mild layout upgrades */
-
 @media (min-width: 480px) {
   .hero-content h1 {
     font-size: clamp(2rem, 5vw, 2.6rem);
@@ -705,8 +673,6 @@ img {
     padding: 0 1.5rem;
   }
 }
-
-/* ≥768px: tablet / small desktop */
 
 @media (min-width: 768px) {
   .welcome-grid {
@@ -745,8 +711,6 @@ img {
   }
 }
 
-/* ≥1024px: desktop */
-
 @media (min-width: 1024px) {
   .special-list {
     max-width: 1000px;
@@ -761,8 +725,6 @@ img {
   }
 }
 
-/* ≥1280px: large desktop */
-
 @media (min-width: 1280px) {
   .special-menu {
     padding: 4rem 0;
@@ -776,8 +738,6 @@ img {
     gap: 3.5rem;
   }
 }
-
-/* VERY SMALL PHONES TWEAKS */
 
 @media (max-width: 375px) {
   .container {
