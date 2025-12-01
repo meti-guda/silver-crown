@@ -26,8 +26,6 @@ img {
   padding: 0 1.5rem;
 }
 
-/* NAVBAR */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -84,8 +82,6 @@ img {
   position: absolute;
   left: -9999px;
 }
-
-/* hamburger / X label */
 
 .nav-toggle-label {
   display: block;
