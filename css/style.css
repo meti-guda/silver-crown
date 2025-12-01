@@ -8,6 +8,10 @@ body {
   color: #572e19;
   background-color: #f5f1e8;
   line-height: 1.6;
+  font-family: "Shantell Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 img {
@@ -21,6 +25,8 @@ img {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+
+/* NAVBAR */
 
 .navbar {
   position: sticky;
@@ -58,7 +64,7 @@ img {
   display: none;
   gap: 1.5rem;
   list-style: none;
-  margin: 40px;
+  margin: 0;
   padding: 0;
 }
 
@@ -78,6 +84,8 @@ img {
   position: absolute;
   left: -9999px;
 }
+
+/* hamburger / X label */
 
 .nav-toggle-label {
   display: block;
@@ -211,7 +219,8 @@ img {
 }
 
 .hero-content h1 {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: #5c4b43;
   margin-bottom: 0.5rem;
@@ -227,6 +236,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: "Shantell Sans", system-ui, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0.8rem 1.4rem;
@@ -263,7 +273,8 @@ img {
 }
 
 .welcome-text h2 {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 1.8rem;
   color: #5c4b43;
   margin-bottom: 1rem;
@@ -295,7 +306,8 @@ img {
 }
 
 .offerings .section-title {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   color: #5c4b43;
   text-align: left;
@@ -324,6 +336,8 @@ img {
 }
 
 .offering-card h3 {
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 1rem;
   color: #5c4b43;
   margin-bottom: 0.4rem;
@@ -340,7 +354,8 @@ img {
 }
 
 .testimonials .section-title {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   color: #5c4b43;
   margin-bottom: 1.5rem;
@@ -370,6 +385,7 @@ img {
 
 .customer-name {
   margin-top: 0.6rem;
+  font-family: "Shantell Sans", system-ui, sans-serif;
   font-weight: 600;
   color: #5c4b43;
   font-size: 0.9rem;
@@ -392,6 +408,8 @@ img {
 }
 
 .footer-section h4 {
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 1rem;
   color: #f5f1e8;
   margin-bottom: 0.6rem;
@@ -454,7 +472,8 @@ img {
 }
 
 .special-title {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   color: #5c4b43;
   text-align: center;
@@ -502,14 +521,16 @@ img {
 }
 
 .special-price {
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 1.1rem;
   color: #8b4343;
-  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .special-name {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 1.25rem;
   color: #5c4b43;
   margin-bottom: 0.5rem;
@@ -542,7 +563,8 @@ img {
 }
 
 .menu-header h1 {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: clamp(1.8rem, 3.5vw, 2.2rem);
   color: #5c4b43;
   margin-bottom: 0.5rem;
@@ -568,7 +590,8 @@ img {
 }
 
 .section-title {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 700;
   font-size: 1.5rem;
   color: #5c4b43;
 }
@@ -604,11 +627,11 @@ img {
 }
 
 .menu-text h3 {
-  font-family: "Eagle Lake", "Times New Roman", serif;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 1rem;
   color: #5c4b43;
   margin: 0;
-  font-weight: 600;
 }
 
 .menu-text p {
@@ -619,9 +642,10 @@ img {
 }
 
 .menu-price {
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-weight: 600;
   font-size: 1rem;
   color: #8b4343;
-  font-weight: 600;
   text-align: right;
   white-space: nowrap;
   align-self: flex-start;
@@ -629,6 +653,8 @@ img {
 }
 
 .item-amharic {
+  font-family: "Menbere", system-ui, sans-serif;
+  font-weight: 500;
   font-size: 0.8rem;
   color: #8b4343;
   margin-left: 0.25rem;
