@@ -207,6 +207,10 @@ img {
   background-color: #f5f1e8;
 }
 
+.hero-btn {
+  margin: 20px 10px;
+}
+
 .hero-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -304,7 +308,7 @@ img {
 .offerings .section-title {
   font-family: "Shantell Sans", system-ui, sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #5c4b43;
   text-align: left;
   margin-bottom: 1.5rem;
@@ -313,8 +317,9 @@ img {
 .offerings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 3.5rem;
+  gap: 1.5rem;
   justify-content: center;
+  margin-right: 2.5rem;
 }
 
 .offering-card {
@@ -352,7 +357,7 @@ img {
 .testimonials .section-title {
   font-family: "Shantell Sans", system-ui, sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #5c4b43;
   margin-bottom: 1.5rem;
 }
@@ -361,6 +366,7 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  margin-right: 2.5rem;
 }
 
 .testimonial-card {
@@ -773,6 +779,10 @@ img {
   .hero .btn {
     width: 60%;
     justify-content: center;
+  }
+
+  .hero-btn .primary-btn {
+    margin-bottom: 0.75rem;
   }
 
   .section-heading {

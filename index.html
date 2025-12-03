@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silver Crown Cafe & Bakery</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Silver Crown Cafe & Bakery — Home</title>
+    <meta
+      name="description"
+      content="Silver Crown — handcrafted coffee and house-made pastries. Visit our cafe for specialty drinks, fresh pastries, and warm hospitality."
+    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Silver Crown Cafe & Bakery" />
+    <meta
+      property="og:description"
+      content="Handcrafted coffee & house-made pastries. Visit Silver Crown for seasonal drinks and warm hospitality."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta name="theme-color" content="#f5f1e8" />
+    <!-- fonts already used in your project -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Menbere:wght@100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Menbere:wght@300;500;700&family=Shantell+Sans:ital,wght@0,300;0,400;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
       <div class="container">
         <div class="navbar-content">
           <div class="logo">
-            <span class="logo-icon">
-              <img src="images/logo.png" alt="Logo" />
-            </span>
+            <span class="logo-icon"
+              ><img src="images/logo.png" alt="Silver Crown logo"
+            /></span>
             <span class="logo-text">Silver Crown</span>
           </div>
 
@@ -32,80 +46,118 @@
           </ul>
 
           <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-          <label for="nav-toggle" class="nav-toggle-label">
+          <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
             <span></span>
           </label>
 
-          <div class="nav-drawer">
-            <a href="index.html" class="active" aria-current="page">Home</a>
+          <div class="nav-drawer" aria-hidden="true">
+            <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
           </div>
+
+          <div class="mobile-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </nav>
 
     <header class="hero">
-      <div class="hero-content">
-        <h1>Coffee. House-Made Pastries.</h1>
-        <p>Your New Favorite Place</p>
-        <a href="menu.html" class="btn primary-btn">Explore Our Menu</a>
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1 class="hero-title">Coffee. House-Made Pastries.</h1>
+          <p class="hero-sub">
+            Small-batch beans, handcrafted pastries, and warm hospitality in
+            every visit.
+          </p>
+          <div class="hero-btn">
+            <a href="menu.html" class="btn primary-btn">Explore Menu</a>
+            <a href="contact.html" class="btn secondary-btn">Find Us</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img
+            src="images/coffee and cake.jpg"
+            alt="Cappuccino and pastry on wooden table"
+          />
+        </div>
       </div>
     </header>
 
-    <section class="welcome">
+    <!-- ABOUT (short story, rewrite) -->
+    <section class="about">
       <div class="container">
-        <div class="welcome-grid">
-          <div class="welcome-text">
-            <h2>Welcome to Silver Crown</h2>
-            <p>Since 2022, Silver Crown has been ....</p>
-            <a href="contact.html" class="btn secondary-btn">Visit Us Today</a>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+              Silver Crown started as a small, neighborhood bakery with one bold
+              idea: coffee and pastry should feel like home. We roast small
+              batches, bake daily from scratch, and focus on comfort, quality,
+              and craft. Come for the coffee, stay for the warmth.
+            </p>
+            <p class="muted">
+              Open daily — see the contact page for hours and location.
+            </p>
           </div>
-          <div class="welcome-image">
-            <div class="image-placeholder">
-              <img src="images/welcome-image.jpg" alt="Cafe Interior" />
-            </div>
+          <div class="about-image">
+            <img
+              src="images/about-interior.jpg"
+              alt="Cafe interior with people and pastries"
+            />
           </div>
         </div>
       </div>
     </section>
 
+    <!-- OFFERINGS (kept concise) -->
     <section class="offerings">
       <div class="container">
-        <h2 class="section-title">Our Signature Offerings</h2>
+        <h2 class="section-title">Signature Offerings</h2>
         <div class="offerings-grid">
-          <div class="offering-card">
+          <article class="offering-card">
             <div class="offering-icon">☕</div>
-            <h3>Specialty Espresso Drinks</h3>
-            <p>
-              Handcrafted cappuccinos, lattes, and seasonal specials made with
-              precision and care. Each cup tells a story.
-            </p>
-          </div>
-          <div class="offering-card">
+            <h3>Specialty Drinks</h3>
+            <p></p>
+          </article>
+          <article class="offering-card">
             <div class="offering-icon">🥐</div>
             <h3>Fresh Pastries</h3>
             <p>
-              Buttery croissants, cinnamon rolls, and Danish pastries baked
-              fresh daily in our kitchen.
+              Buttery croissants & daily-baked cheesecakes from our kitchen.
             </p>
-          </div>
-          <div class="offering-card">
-            <div class="offering-icon">🍞</div>
-            <h3>Artisan Breakfast</h3>
-            <p>
-              Avocado toast, breakfast sandwiches, and seasonal bowls made with
-              locally-sourced ingredients.
-            </p>
-          </div>
-          <div class="offering-card">
+          </article>
+
+          <article class="offering-card">
             <div class="offering-icon">✨</div>
-            <h3>House Specials</h3>
-            <p>
-              Limited-edition drinks and pastries that change monthly. Follow us
-              on Instagram for announcements.
-            </p>
-          </div>
+            <h3>Seasonal Specials</h3>
+            <p>Limited creations. Follow us to keep up.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid" aria-hidden="false">
+          <figure>
+            <img src="images/gallery-1.jpg" alt="Pastries on display" />
+          </figure>
+          <figure>
+            <img src="images/gallery-2.jpg" alt="Barista making coffee" />
+          </figure>
+          <figure>
+            <img src="images/gallery-3.jpg" alt="Coffee cup closeup" />
+          </figure>
+          <figure>
+            <img src="images/gallery-4.jpg" alt="Interior seating area" />
+          </figure>
+          <figure>
+            <img src="images/gallery-5.jpg" alt="Baking in kitchen" />
+          </figure>
+          <figure>
+            <img src="images/gallery-6.jpg" alt="Seasonal drink" />
+          </figure>
         </div>
       </div>
     </section>
@@ -118,25 +170,19 @@
             <div class="stars">★★★★★</div>
             <p>
               "Silver Crown has become my morning ritual. The coffee is
-              perfection, and the pastries? Absolutely divine."
+              perfection."
             </p>
-            <p class="customer-name">— Sarah Mitchell</p>
+            <p class="customer-name">— Sami</p>
           </div>
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
-            <p>
-              "I work here three times a week now. The ambiance, the service,
-              the attention to detail—it's all exceptional."
-            </p>
-            <p class="customer-name">— James Rodriguez</p>
+            <p>"Amazing pastries and cozy space, my favorite spot."</p>
+            <p class="customer-name">— Abdi</p>
           </div>
           <div class="testimonial-card">
             <div class="stars">★★★★</div>
-            <p>
-              "Finally, a café that takes both coffee AND pastries seriously.
-              Everything is made with real craft."
-            </p>
-            <p class="customer-name">— Emma Kowalski</p>
+            <p>"Great atmosphere and friendly staff. Highly recommend."</p>
+            <p class="customer-name">— Ruth</p>
           </div>
         </div>
       </div>
@@ -148,7 +194,7 @@
           <div class="footer-section">
             <div class="logo">
               <span class="logo-icon"
-                ><img src="images/logo.png" alt="Logo"
+                ><img src="images/logo.png" alt="Silver Crown logo"
               /></span>
               <span class="logo-text">Silver Crown</span>
             </div>
@@ -165,21 +211,24 @@
           <div class="footer-section">
             <h4>Follow Us</h4>
             <div class="social-links">
-              <a href="#" aria-label="Instagram">
-                <img src="images/instagram-logo.png" alt="Instagram" />
-                Instagram</a
+              <a href="#" aria-label="Instagram"
+                ><img
+                  src="images/instagram-logo.png"
+                  alt="Instagram"
+                />Instagram</a
               >
               <a href="#" aria-label="Facebook"
-                ><img src="images/facebook-logo.png" alt="Facebook" />
-                Facebook</a
+                ><img
+                  src="images/facebook-logo.png"
+                  alt="Facebook"
+                />Facebook</a
               >
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <p>
-            @ 2025 Silver Crown Cafe. Handcrafted with ❤️ | Designed for
-            quality, built for community.
+            @ 2025 Silver Crown Cafe. Handcrafted with ❤️ | Built for community.
           </p>
         </div>
       </div>
