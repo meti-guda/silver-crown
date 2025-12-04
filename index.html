@@ -4,20 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Silver Crown Cafe & Bakery — Home</title>
-    <meta
-      name="description"
-      content="Silver Crown — handcrafted coffee and house-made pastries. Visit our cafe for specialty drinks, fresh pastries, and warm hospitality."
-    />
-
-    <meta property="og:title" content="Silver Crown Cafe & Bakery" />
-    <meta
-      property="og:description"
-      content="Handcrafted coffee & house-made pastries. Visit Silver Crown for seasonal drinks and warm hospitality."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/og-image.jpg" />
-    <meta name="theme-color" content="#f5f1e8" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,13 +13,13 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar" aria-label="Primary">
+    <nav class="navbar">
       <div class="container">
         <div class="navbar-content">
           <div class="logo">
-            <span class="logo-icon"
-              ><img src="images/logo.png" alt="Silver Crown logo"
-            /></span>
+            <span class="logo-icon">
+              <img src="images/logo.png" alt="Logo" />
+            </span>
             <span class="logo-text">Silver Crown</span>
           </div>
 
@@ -46,17 +32,15 @@
           </ul>
 
           <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-          <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+          <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
           </label>
 
-          <div class="nav-drawer" aria-hidden="true">
-            <a href="index.html">Home</a>
+          <div class="nav-drawer">
+            <a href="index.html" class="active" aria-current="page">Home</a>
             <a href="menu.html">Menu</a>
             <a href="contact.html">Contact</a>
           </div>
-
-          <div class="mobile-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </nav>
@@ -124,7 +108,6 @@
               Buttery croissants & daily-baked cheesecakes from our kitchen.
             </p>
           </article>
-
           <article class="offering-card">
             <div class="offering-icon">✨</div>
             <h3>Seasonal Specials</h3>
