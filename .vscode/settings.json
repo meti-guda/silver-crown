@@ -1,9 +1,4 @@
 {
-  "conventionalCommits.scopes": [
-    "home",
-    "layout",
-    "menu",
-    "styles"
-  ],
+  "conventionalCommits.scopes": ["home", "layout", "menu", "styles", "contact"],
   "liveServer.settings.port": 5501
 }
