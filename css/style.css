@@ -60,7 +60,7 @@ img {
 
 .nav-links {
   display: none;
-  gap: 1.5rem;
+  gap: 2.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -70,7 +70,7 @@ img {
   color: #5c4b43;
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s ease;
 }
 
