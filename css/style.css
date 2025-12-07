@@ -26,6 +26,7 @@ img {
   padding: 0 1.5rem;
 }
 
+/*   Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -74,8 +75,13 @@ img {
   transition: color 0.2s ease;
 }
 
+/* nav hover/active */
 .nav-links a:hover {
   color: #8b4343;
+}
+
+.nav-links a:active {
+  color: #572e19;
 }
 
 .nav-toggle {
@@ -170,10 +176,12 @@ img {
   transform: translateX(0);
 }
 
+/* Hero */
 .hero {
   padding: 4.5rem 0 3.5rem;
   background-color: #f5f1e8;
 }
+
 .hero-title {
   text-align: center;
   margin-bottom: 20px;
@@ -209,6 +217,7 @@ img {
   margin-bottom: 1.5rem;
 }
 
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -220,9 +229,9 @@ img {
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-    background-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.2s ease, color 0.2s ease;
 }
 
 .primary-btn {
@@ -237,9 +246,31 @@ img {
   border: 1px solid #5c4b434d;
 }
 
+/* button hover/active */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #d8b180, #9a4c4c);
+}
+
+.secondary-btn:hover {
+  background-color: #5c4b43;
+  color: #f5f1e8;
+}
+
+/* About / Welcome */
 .about-text {
   margin: 0 25px 0 0;
 }
+
 .about-text h2 {
   font-size: 1.8rem;
 }
@@ -284,6 +315,7 @@ img {
   object-fit: cover;
 }
 
+/* Offerings */
 .offerings {
   padding: 3rem 0;
   background-color: #f5f1e8;
@@ -328,11 +360,17 @@ img {
   margin-bottom: 0.4rem;
 }
 
+/* hover for headings */
+.offering-card h3:hover {
+  color: #8b4343;
+}
+
 .offering-card p {
   font-size: 0.9rem;
   color: #8a7a70;
 }
 
+/* Testimonials  */
 .testimonials {
   padding: 3rem 0;
   background-color: #f5f1e8;
@@ -377,6 +415,7 @@ img {
   font-size: 0.9rem;
 }
 
+/* Footer */
 .footer {
   background-color: #1e1713;
   color: #f5f1e8;
@@ -453,6 +492,7 @@ img {
   margin-right: 25px;
 }
 
+/* Special Menu */
 .special-menu {
   padding: 3rem 0;
   background-color: #f5f1e8;
@@ -512,6 +552,11 @@ img {
   display: inline-block;
 }
 
+/* hover for special names */
+.special-name:hover {
+  color: #8b4343;
+}
+
 .special-name::after {
   content: "";
   position: absolute;
@@ -529,6 +574,7 @@ img {
   line-height: 1.6;
 }
 
+/*  Menu Sections */
 .menu-header {
   padding: 3rem 0 2rem;
   background-color: #f5f1e8;
@@ -607,6 +653,11 @@ img {
   margin: 0;
 }
 
+/* menu item hover */
+.menu-text h3:hover {
+  color: #8b4343;
+}
+
 .menu-text p {
   font-size: 0.9rem;
   color: #8a7a70;
@@ -634,6 +685,7 @@ img {
   margin-left: 0.25rem;
 }
 
+/* Quality Section */
 .quality-info {
   padding: 2.5rem 0 3rem;
   background-color: #f5f1e8;
@@ -663,21 +715,23 @@ img {
   color: #8a7a70;
   max-width: 550px;
   margin: 0 20px 0 0;
-
   justify-self: center;
 }
 
-/* Contact page */
+/*   Contact Page */
 .contact-intro p {
   margin: 0 20px 0 0;
 }
+
 .contact-details p {
   margin: 0 20px 0 0;
 }
+
 .contact-map p {
   margin: 0 20px 0 0;
 }
 
+/* Breakpoints */
 @media (min-width: 480px) {
   .hero-content h1 {
     font-size: clamp(2rem, 5vw, 2.6rem);
