@@ -8,8 +8,7 @@ body {
   color: #572e19;
   background-color: #f5f1e8;
   line-height: 1.6;
-  font-family: "Shantell Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "Shantell Sans", system-ui, "Segoe UI", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -731,7 +730,7 @@ img {
   margin: 0 20px 0 0;
 }
 
-/* Breakpoints */
+/* media queries */
 @media (min-width: 480px) {
   .hero-content h1 {
     font-size: clamp(2rem, 5vw, 2.6rem);
