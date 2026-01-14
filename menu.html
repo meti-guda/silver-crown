@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Menbere:wght@100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/c80abd48a2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -123,6 +127,50 @@
       </div>
     </section>
 
+    <section class="menu-search">
+      <div class="container">
+        <label for="menu-search-input" class="menu-search-label">
+          Search the menu
+        </label>
+        <div class="menu-search-wrapper">
+          <input
+            type="text"
+            id="menu-search-input"
+            class="menu-search-input"
+            placeholder="Search by drink, flavor, or description..."
+            aria-label="Search the menu"
+          />
+          <button
+            type="button"
+            class="menu-search-icon-btn"
+            aria-hidden="true"
+            tabindex="-1"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button
+            type="button"
+            class="menu-search-clear"
+            aria-label="Clear search"
+          >
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: menu filters -->
+    <section class="menu-filters">
+      <div class="container">
+        <div class="menu-filters-inner">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="hot">Hot</button>
+          <button class="filter-btn" data-filter="cold">Cold</button>
+          <button class="filter-btn" data-filter="baked">Baked</button>
+        </div>
+      </div>
+    </section>
+
     <section class="coffee-menu">
       <div class="container">
         <div class="section-heading">
@@ -131,7 +179,7 @@
         </div>
 
         <div class="menu-table hot-table">
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Jebena Buna <span class="item-amharic">[ጀበና ቡና]</span></h3>
               <p>
@@ -144,7 +192,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Espresso <span class="item-amharic">[ኤስፕሬሶ]</span></h3>
               <p>Single or double shot of a signature espresso blend.</p>
@@ -154,7 +202,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Macchiato <span class="item-amharic">[ማኪያቶ]</span></h3>
               <p>Rich espresso with a small amount of silky milk foam.</p>
@@ -164,7 +212,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Tea <span class="item-amharic">[ሻይ]</span></h3>
               <p>Classic black tea served hot with sugar on the side.</p>
@@ -174,7 +222,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Green Tea <span class="item-amharic">[አረንጓዴ ሻይ]</span></h3>
               <p>Light, soothing green tea with a gentle aroma.</p>
@@ -184,7 +232,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Matcha <span class="item-amharic">[ማትቻ]</span></h3>
               <p>Creamy Japanese green tea drink with a smooth finish.</p>
@@ -194,7 +242,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>Ginger Tea <span class="item-amharic">[ቀሽር]</span></h3>
               <p>Warm tea infused with fresh ginger for a spicy flavor.</p>
@@ -204,7 +252,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>
                 Vegan Soy Macchiato
@@ -217,7 +265,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="hot">
             <div class="menu-text">
               <h3>
                 Vegan Oat Macchiato <span class="item-amharic">[አጃ ማኪያቶ]</span>
@@ -244,7 +292,7 @@
         </div>
 
         <div class="menu-table cold-table">
-          <div class="menu-row">
+          <div class="menu-row" data-category="cold">
             <div class="menu-text">
               <h3>Iced Latte <span class="item-amharic">[አይስድ ላቴ]</span></h3>
               <p>Espresso with cold milk and ice.</p>
@@ -254,7 +302,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="cold">
             <div class="menu-text">
               <h3>
                 Iced Caramel Latte
@@ -267,7 +315,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="cold">
             <div class="menu-text">
               <h3>Iced Matcha <span class="item-amharic">[አይስድ ማትቻ]</span></h3>
               <p>Japanese green tea drink with ice.</p>
@@ -277,7 +325,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="cold">
             <div class="menu-text">
               <h3>
                 Iced Americano <span class="item-amharic">[አይስድ አሜሪካኖ]</span>
@@ -300,7 +348,7 @@
         </div>
 
         <div class="menu-table pastry-table">
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>Croissant <span class="item-amharic">[ክሮሳን]</span></h3>
               <p>Flaky, golden croissant with butter.</p>
@@ -310,7 +358,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>
                 Chocolate Croissant
@@ -323,7 +371,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>Cinnamon Roll <span class="item-amharic">[የቀረፋ ዳቦ]</span></h3>
               <p>Warm, fluffy roll with cinnamon sugar filling and cream.</p>
@@ -333,7 +381,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>
                 Strawberry Muffin <span class="item-amharic">[እንጆሪ ኬክ]</span>
@@ -345,7 +393,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>
                 Chocolate Chip Cookie
@@ -358,7 +406,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>Banana Bread <span class="item-amharic">[የሙዝ ዳቦ]</span></h3>
               <p>Sweet bread made from banana.</p>
@@ -368,7 +416,7 @@
             </div>
           </div>
 
-          <div class="menu-row">
+          <div class="menu-row" data-category="baked">
             <div class="menu-text">
               <h3>Cheesecake <span class="item-amharic">[ቺዝ ኬክ]</span></h3>
               <p>Delicate pastry with fruit filling and light glaze.</p>
