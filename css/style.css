@@ -944,3 +944,151 @@ img {
   background: linear-gradient(90deg, #cea375, #8b4343);
   border-radius: 999px;
 }
+
+/* Menu filters */
+.menu-filters {
+  padding: 1.5rem 0 0.5rem;
+  background-color: #f5f1e8;
+}
+
+.menu-filters-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  border: 1px solid #e0d5c8;
+  background-color: #ffffff;
+  color: #5c4b43;
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.4rem 1.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f5e5cf;
+  border-color: #cea375;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #cea375, #8b4343);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Menu search */
+.menu-search {
+  padding: 0 0 1.25rem;
+}
+
+.menu-search-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #856c5d;
+  margin-bottom: 0.3rem;
+}
+
+.menu-search-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem; /* controls distance from bar edge to BOTH icons */
+  border-radius: 999px;
+  border: 1px solid #e0d5c8;
+  background: #faf5ec;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  gap: 0.4rem;
+  width: 56%; /* keep this as you already have */
+  box-sizing: border-box;
+}
+
+.menu-search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.4rem 0; /* no left/right padding */
+  font-family: "Shantell Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #5c4b43;
+}
+
+.menu-search-input::placeholder {
+  color: #c0a897;
+}
+
+.menu-search-input:focus {
+  outline: none;
+}
+
+.menu-search-icon-btn,
+.menu-search-clear {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0; /* no extra padding on the button itself */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.menu-search-icon-btn i,
+.menu-search-clear i {
+  padding: 0.25rem;
+}
+
+.menu-search-icon-btn {
+  color: #c4875b; /* warm coffee tone */
+}
+
+.menu-search-clear {
+  color: #c4875b;
+}
+
+/* hover only on x (clear) */
+.menu-search-clear:hover {
+  color: #8b4343;
+  transform: scale(1.05);
+}
+
+/* default visibility: show magnifier, hide X */
+.menu-search-icon-btn {
+  visibility: visible;
+}
+
+.menu-search-clear {
+  visibility: hidden;
+}
+
+/* On very small screens, let it expand */
+/* extra-tight for ~320px */
+@media (max-width: 360px) {
+  .menu-search-input {
+    font-size: 0.8rem;
+  }
+
+  .menu-search-icon-btn,
+  .menu-search-clear {
+    padding: 0.3rem; /* slightly smaller icon tappable area */
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .menu-search-wrapper {
+    width: 90%;
+  }
+
+  .menu-search-input {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
