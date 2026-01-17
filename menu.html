@@ -28,6 +28,7 @@
             <span class="logo-text">Silver Crown</span>
           </div>
 
+          <!-- DESKTOP NAV + CART ONLY -->
           <div class="nav-main-actions">
             <ul class="nav-links">
               <li><a href="index.html">Home</a></li>
@@ -35,6 +36,7 @@
               <li><a href="contact.html">Contact</a></li>
             </ul>
 
+            <!-- CART BUTTON -->
             <button
               class="navbar-cart-btn"
               id="navbar-cart-btn"
@@ -43,16 +45,18 @@
               <i class="fa-solid fa-shopping-bag"></i>
               <span class="cart-badge" id="cart-badge">0</span>
             </button>
-
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-            <label for="nav-toggle" class="nav-toggle-label">
-              <span></span>
-            </label>
           </div>
 
+          <!-- HAMBURGER CHECKBOX + LABEL (MOVED OUT) -->
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+
+          <!-- MOBILE DRAWER LINKS -->
           <div class="nav-drawer">
             <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
+            <a href="menu.html" class="active">Menu</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
@@ -215,6 +219,7 @@
 
     <div class="toast-container" id="toast-container"></div>
 
+    <script src="js/main.js" type="module"></script>
     <script src="js/menu-page.js" type="module"></script>
   </body>
 </html>
