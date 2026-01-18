@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showError(input, message) {
     const errorEl = document.querySelector(
-      `.form-error[data-error-for="${input.id}"]`
+      `.form-error[data-error-for="${input.id}"]`,
     );
     if (errorEl) {
       errorEl.textContent = message;
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function clearError(input) {
     const errorEl = document.querySelector(
-      `.form-error[data-error-for="${input.id}"]`
+      `.form-error[data-error-for="${input.id}"]`,
     );
     if (errorEl) {
       errorEl.textContent = "";
@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function validateEmail(value) {
-    // Simple email check
     return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value.trim());
   }
 
