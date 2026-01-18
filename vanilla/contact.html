@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Silver Crown Cafe & Bakery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Menbere:wght@100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <div class="logo">
+            <span class="logo-icon">
+              <img src="images/logo.png" alt="Logo" />
+            </span>
+            <span class="logo-text">Silver Crown</span>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+
+          <div class="nav-drawer">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="contact-page">
+      <div class="container">
+        <section class="contact-intro">
+          <h1 class="section-title">Visit Silver Crown</h1>
+          <p>
+            Find us in Piassa, a short walk from Adwa Museum, between
+            neighborhood shops.
+          </p>
+        </section>
+
+        <section class="contact-grid">
+          <div class="contact-details">
+            <h2>Location</h2>
+            <p>
+              Piassa, near Adwa Museum<br />
+              Addis Ababa, Ethiopia
+            </p>
+
+            <h2>Hours</h2>
+            <p>
+              Monday – Friday: 7:00 AM – 9:00 PM<br />
+              Saturday – Sunday: 8:00 AM – 10:00 PM
+            </p>
+
+            <h2>Contact</h2>
+            <p>
+              Phone:
+              <a href="tel:+251900000000">+251 900 000 000</a><br />
+              Email:
+              <a href="mailto:hello@silvercrown.cafe">hello@silvercrown.cafe</a>
+            </p>
+          </div>
+
+          <div class="contact-map">
+            <h2>Getting Here</h2>
+            <p>
+              We are a few minutes on foot from the main Adwa Museum entrance.
+              Taxis and Ride cars can drop you at the museum gate; from there,
+              follow the signs toward Piassa.
+            </p>
+            <p>Parking is available on nearby side streets or in the museum.</p>
+            <p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Adwa+Museum,+Piassa,+Addis+Ababa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open in Google Maps
+              </a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <section class="contact-form-section">
+        <div class="container">
+          <h2>Send us a message</h2>
+          <p>
+            Questions, special orders, or feedback? Send a quick note and we’ll
+            get back to you.
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                class="form-control"
+                name="name"
+                required
+              />
+              <p class="form-error" data-error-for="contact-name"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="contact-email"
+                class="form-control"
+                name="email"
+                required
+              />
+              <p class="form-error" data-error-for="contact-email"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea
+                id="contact-message"
+                class="form-control"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <p class="form-error" data-error-for="contact-message"></p>
+            </div>
+
+            <button type="submit" class="btn primary-btn">Send message</button>
+
+            <p id="contact-success" class="form-success" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="logo">
+              <span class="logo-icon"
+                ><img src="images/logo.png" alt="Logo"
+              /></span>
+              <span class="logo-text">Silver Crown</span>
+            </div>
+            <p>Coffee. House-made pastries. Warm hospitality.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  src="images/instagram-logo.png"
+                  alt="Instagram"
+                />Instagram</a
+              >
+              <a href="#"
+                ><img
+                  src="images/facebook-logo.png"
+                  alt="Facebook"
+                />Facebook</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            @ 2025 Silver Crown Cafe. Handcrafted with ❤️ | Designed for
+            quality, built for community.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
