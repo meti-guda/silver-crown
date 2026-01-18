@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+// src/components/common/Navbar.jsx
+import React, { useState } from "react";
+import { useActiveLink } from "../../hooks/useActiveLink";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { isActive } = useActiveLink();
 
   const handleToggle = () => {
     setIsDrawerOpen((prev) => !prev);
@@ -23,24 +26,54 @@ const Navbar = () => {
           </div>
 
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li>
+              <a href="/" className={isActive("/") ? "active" : ""}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/menu" className={isActive("/menu") ? "active" : ""}>
+                Menu
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className={isActive("/contact") ? "active" : ""}>
+                Contact
+              </a>
+            </li>
           </ul>
 
           <button
             type="button"
-            className={`nav-toggle-btn ${isDrawerOpen ? 'open' : ''}`}
+            className={`nav-toggle-btn ${isDrawerOpen ? "open" : ""}`}
             aria-label="Toggle navigation menu"
             onClick={handleToggle}
           >
             <span></span>
           </button>
 
-          <div className={`nav-drawer ${isDrawerOpen ? 'open' : ''}`}>
-            <a href="/" onClick={handleDrawerLinkClick}>Home</a>
-            <a href="/menu" onClick={handleDrawerLinkClick}>Menu</a>
-            <a href="/contact" onClick={handleDrawerLinkClick}>Contact</a>
+          <div className={`nav-drawer ${isDrawerOpen ? "open" : ""}`}>
+            <a
+              href="/"
+              className={isActive("/") ? "active" : ""}
+              onClick={handleDrawerLinkClick}
+            >
+              Home
+            </a>
+            <a
+              href="/menu"
+              className={isActive("/menu") ? "active" : ""}
+              onClick={handleDrawerLinkClick}
+            >
+              Menu
+            </a>
+            <a
+              href="/contact"
+              className={isActive("/contact") ? "active" : ""}
+              onClick={handleDrawerLinkClick}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>
