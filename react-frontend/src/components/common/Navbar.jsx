@@ -1,8 +1,8 @@
-// src/components/common/Navbar.jsx
 import React, { useState } from "react";
 import { useActiveLink } from "../../hooks/useActiveLink";
+import { FaShoppingBag } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ onCartClick, cartCount = 0 }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { isActive } = useActiveLink();
 
@@ -25,23 +25,38 @@ const Navbar = () => {
             <span className="logo-text">Silver Crown</span>
           </div>
 
-          <ul className="nav-links">
-            <li>
-              <a href="/" className={isActive("/") ? "active" : ""}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/menu" className={isActive("/menu") ? "active" : ""}>
-                Menu
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className={isActive("/contact") ? "active" : ""}>
-                Contact
-              </a>
-            </li>
-          </ul>
+          <div className="nav-main-actions">
+            <ul className="nav-links">
+              <li>
+                <a href="/" className={isActive("/") ? "active" : ""}>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/menu" className={isActive("/menu") ? "active" : ""}>
+                  Menu
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className={isActive("/contact") ? "active" : ""}
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+
+            <button
+              type="button"
+              className="navbar-cart-btn"
+              aria-label="Open shopping cart"
+              onClick={onCartClick}
+            >
+              <FaShoppingBag />
+              <span className="cart-badge">{cartCount}</span>
+            </button>
+          </div>
 
           <button
             type="button"
