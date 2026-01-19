@@ -10,7 +10,7 @@ import Footer from '../common/Footer';
 const Homepage = () => {
   return (
     <>
-      <Navbar />
+     <Navbar onCartClick={() => {}} cartCount={0} />
       <Hero />
       <About />
       <Offerings />

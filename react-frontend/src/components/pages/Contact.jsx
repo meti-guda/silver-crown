@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import ContactForm from "../contact/ContactForm";
@@ -7,7 +7,7 @@ import ContactDetails from "../contact/ContactDetails";
 const Contact = () => {
   return (
     <main className="contact-page">
-      <Navbar />
+    <Navbar onCartClick={() => {}} cartCount={0} />
 
       <section className="contact-intro">
         <div className="container">
