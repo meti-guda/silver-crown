@@ -3,11 +3,16 @@ import Navbar from "../common/Navbar";
 import Footer from "../common/Footer";
 import ContactForm from "../contact/ContactForm";
 import ContactDetails from "../contact/ContactDetails";
+import { useMenu } from "../menu/MenuContext";
+
+
+
 
 const Contact = () => {
+  const { cartCount } = useMenu();
   return (
     <main className="contact-page">
-    <Navbar onCartClick={() => {}} cartCount={0} />
+      <Navbar onCartClick={() => { }} cartCount={cartCount} />
 
       <section className="contact-intro">
         <div className="container">

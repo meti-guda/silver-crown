@@ -20,7 +20,8 @@ const Navbar = ({ onCartClick, cartCount = 0 }) => {
         <div className="navbar-content">
           <div className="logo">
             <span className="logo-icon">
-              <img src="/images/logo.png" alt="Silver Crown Logo" />
+              <a href="/"> <img src="/images/logo.png" alt="Silver Crown Logo" />
+              </a>
             </span>
             <span className="logo-text">Silver Crown</span>
           </div>

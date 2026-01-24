@@ -6,11 +6,15 @@ import Offerings from '../home/Offerings';
 import Gallery from '../home/Gallery';
 import Testimonials from '../home/Testimonials';
 import Footer from '../common/Footer';
+import { useMenu } from '../menu/MenuContext';
+
 
 const Homepage = () => {
+  const { cartCount } = useMenu();
+
   return (
     <>
-     <Navbar onCartClick={() => {}} cartCount={0} />
+      <Navbar onCartClick={() => { }} cartCount={cartCount} />
       <Hero />
       <About />
       <Offerings />

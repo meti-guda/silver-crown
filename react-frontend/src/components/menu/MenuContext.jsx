@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getItemById } from "../../data/menuItems";
+import ToastContainer from "./ToastContainer";
 
 const FAVORITES_STORAGE_KEY = "silvercrown_favorites";
 const CART_STORAGE_KEY = "silvercrown_cart";
@@ -121,5 +122,7 @@ export const MenuProvider = ({ children }) => {
     showToast,
   };
 
-  return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
+  return <MenuContext.Provider value={value}>{children}
+    <ToastContainer />
+  </MenuContext.Provider>;
 };
