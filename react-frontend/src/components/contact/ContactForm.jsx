@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { api } from '../../api';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
@@ -18,17 +20,17 @@ const ContactForm = () => {
     const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Please enter your name.";
+      newErrors.name = 'Please enter your name.';
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Please enter your email.";
+      newErrors.email = 'Please enter your email.';
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = "Please enter a valid email address.";
+      newErrors.email = 'Please enter a valid email address.';
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Please enter a message.";
+      newErrors.message = 'Please enter a message.';
     }
 
     setErrors(newErrors);
@@ -37,7 +39,6 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -46,39 +47,52 @@ const ContactForm = () => {
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
-        [name]: "",
+        [name]: '',
       }));
     }
-
-    setSuccessMessage("");
+    setSuccessMessage('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
-      setSuccessMessage("");
       return;
     }
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    setIsSubmitting(true);
 
-    setErrors({});
-    setSuccessMessage(
-      "Thank you! Your message has been received. We will get back to you soon."
-    );
+    try {
+      const response = await api.submitContact(
+        formData.name,
+        formData.email,
+        formData.message
+      );
 
-    setTimeout(() => {
-      setSuccessMessage("");
-    }, 5000);
+      if (response.success) {
+        setFormData({ name: '', email: '', message: '' });
+        setErrors({});
+        setSuccessMessage('Thank you! Your message has been received. We will get back to you soon.');
+        setTimeout(() => setSuccessMessage(''), 5000);
+      } else {
+        setErrors({ submit: response.error || 'Failed to send message' });
+      }
+    } catch (error) {
+      console.error('Contact submission error:', error);
+      setErrors({ submit: 'Error submitting form. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form className="contact-form" onSubmit={handleSubmit} noValidate>
+      {errors.submit && (
+        <div className="form-error form-error-block" role="alert">
+          {errors.submit}
+        </div>
+      )}
+
       <div className="form-group">
         <label htmlFor="contact-name" className="form-label">
           Name
@@ -87,7 +101,7 @@ const ContactForm = () => {
           type="text"
           id="contact-name"
           name="name"
-          className={`form-control ${errors.name ? "has-error" : ""}`}
+          className={`form-control ${errors.name ? 'has-error' : ''}`}
           value={formData.name}
           onChange={handleChange}
         />
@@ -106,7 +120,7 @@ const ContactForm = () => {
           type="email"
           id="contact-email"
           name="email"
-          className={`form-control ${errors.email ? "has-error" : ""}`}
+          className={`form-control ${errors.email ? 'has-error' : ''}`}
           value={formData.email}
           onChange={handleChange}
         />
@@ -125,7 +139,7 @@ const ContactForm = () => {
           id="contact-message"
           name="message"
           rows="5"
-          className={`form-control ${errors.message ? "has-error" : ""}`}
+          className={`form-control ${errors.message ? 'has-error' : ''}`}
           value={formData.message}
           onChange={handleChange}
         />
@@ -136,8 +150,12 @@ const ContactForm = () => {
         )}
       </div>
 
-      <button type="submit" className="btn primary-btn">
-        Send message
+      <button
+        type="submit"
+        className="btn primary-btn"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? 'Sending...' : 'Send message'}
       </button>
 
       {successMessage && (
