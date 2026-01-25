@@ -57,7 +57,7 @@ const SpecialMenu = () => {
                 <button
                   className="btn primary-btn special-add-btn"
                   onClick={() => addToCart(item.id, 1)}
-                > <FaShoppingBag/>
+                > <FaShoppingBag />
                   Add to Cart
                 </button>
               </div>
