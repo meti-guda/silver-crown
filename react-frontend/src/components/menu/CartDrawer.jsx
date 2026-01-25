@@ -8,6 +8,7 @@ import {
   FaShoppingBag,
 } from "react-icons/fa";
 import { useMenu } from "./MenuContext";
+import CheckoutForm from './CheckoutForm';
 
 const CartDrawer = ({ open, onClose }) => {
   const {
@@ -19,6 +20,8 @@ const CartDrawer = ({ open, onClose }) => {
     showToast,
   } = useMenu();
   const [showClearModal, setShowClearModal] = useState(false);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains("cart-drawer-overlay")) {
@@ -31,6 +34,13 @@ const CartDrawer = ({ open, onClose }) => {
     showToast("Cart cleared");
     setShowClearModal(false);
   };
+
+  const handleCheckoutSuccess = (orderId) => {
+    showToast(`Order #${orderId} placed! We'll prepare it for you.`);
+    clearCart();
+    setIsCheckoutOpen(false);
+  };
+
 
   return (
     <>
@@ -49,7 +59,7 @@ const CartDrawer = ({ open, onClose }) => {
         <div className="cart-drawer-content">
           {cartItems.length === 0 ? (
             <div className="cart-empty">
-              <div  className="i"><FaShoppingBag/></div>
+              <div className="i"><FaShoppingBag /></div>
               <p>Your cart is empty</p>
               <p className="cart-empty-hint">
                 Add items from the menu to get started!
@@ -107,11 +117,7 @@ const CartDrawer = ({ open, onClose }) => {
               </div>
               <button
                 className="btn primary-btn cart-checkout-btn"
-                onClick={() =>
-                  showToast(
-                    "This feature is coming soon! For now, note your order and visit us 😊"
-                  )
-                }
+                onClick={() => setIsCheckoutOpen(true)}
               >
                 <FaCreditCard /> Proceed to Order
               </button>
@@ -153,6 +159,14 @@ const CartDrawer = ({ open, onClose }) => {
           </div>
         </div>
       )}
+
+      <CheckoutForm
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        cartItems={cartItems}
+        cartTotal={cartTotal}
+        onSuccess={handleCheckoutSuccess}
+      />
     </>
   );
 };
