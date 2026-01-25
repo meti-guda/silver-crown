@@ -78,9 +78,8 @@ const MenuGrid = ({ activeFilter, searchQuery }) => {
                           </span>
                           <button
                             type="button"
-                            className={`menu-item-favorite-btn ${
-                              favorite ? "heart-filled" : ""
-                            }`}
+                            className={`menu-item-favorite-btn ${favorite ? "heart-filled" : ""
+                              }`}
                             aria-label={
                               favorite
                                 ? "Remove from favorites"
